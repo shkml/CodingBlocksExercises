@@ -33,6 +33,6 @@ public class PersonClient {
         System.out.println(p3.getAge());
         System.out.println(p3.getName());
 
-        Person p4 = new Person("", 0);
+//        Person p4 = new Person("", 0);
     }
 }
