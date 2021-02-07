@@ -1,8 +1,11 @@
+// All methods of stack works on O(1) time but the display, since display depends on the size
+
+// Application - Browser - when we use back and forward button
 package OOPs;
 
 public class StackUsingArrays {
-    private int[] data;
-    private int top;
+    protected int[] data;
+    protected int top;
 
     public static final int DAFAULTCAPACITY =10;
     public StackUsingArrays() throws Exception{
@@ -52,7 +55,7 @@ public class StackUsingArrays {
 
     public void display(){
         for (int i =this.top; i>=0; i--){
-            System.out.println(this.data[i]+" ");
+            System.out.print(this.data[i]+" ");
         }
         System.out.println("End!");
     }
