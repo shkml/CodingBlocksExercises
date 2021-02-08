@@ -1,3 +1,8 @@
+/* - Multiple inheritance in interface is possible
+* - one interface can extends 2 interfaces
+* only classes can implement interfaces
+* */
+
 package OOPs;
 
 public class Person {
