@@ -1,6 +1,6 @@
 // Here, we are finding the next greater element for each element present inside the array
 
-package OOPs;
+package OOPs.Concepts;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package OOPs;
+package OOPs.Stacks;
 
 public class DynamicStackClient {
     public static void main(String[] args) throws Exception{

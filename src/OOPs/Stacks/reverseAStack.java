@@ -1,4 +1,4 @@
-package OOPs;
+package OOPs.Stacks;
 
 public class reverseAStack {
     public static void main(String[] args) throws Exception {

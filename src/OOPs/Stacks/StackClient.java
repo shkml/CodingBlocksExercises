@@ -1,4 +1,4 @@
-package OOPs;
+package OOPs.Stacks;
 
 public class StackClient {
     public static void main(String[] args) throws Exception{

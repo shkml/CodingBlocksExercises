@@ -1,7 +1,7 @@
 // All methods of stack works on O(1) time but the display, since display depends on the size
 
 // Application - Browser - when we use back and forward button
-package OOPs;
+package OOPs.Stacks;
 
 public class StackUsingArrays {
     protected int[] data;

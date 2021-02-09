@@ -1,5 +1,7 @@
 package OOPs;
 
+import java.util.Comparator;
+
 public class GenericDisplay {
     public static void main(String[] args) {
         Integer[] arr = {10, 20, 30, 40};
@@ -25,6 +27,16 @@ public class GenericDisplay {
         display(cars);
 //        System.out.println(cars.getClass());
         System.out.println();
+
+
+        bubbleSrt(cars, new CarSpeedComparator());
+        display(cars);
+
+        bubbleSrt(cars, new CarPriceComparator());
+        display(cars);
+
+        bubbleSrt(cars, new CarColorComparator());
+        display(cars);
     }
 
 /*
@@ -46,6 +58,19 @@ public class GenericDisplay {
         for(int counter = 0; counter <arr.length-1; counter++){
             for (int j=0; j<arr.length-1-counter; j++){
                 if (arr[j].compareTo(arr[j+1]) > 0){
+                    T temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    }
+
+
+    public static <T> void bubbleSrt(T[] arr, Comparator<T> comparator){
+        for(int counter = 0; counter <arr.length-1; counter++){
+            for (int j=0; j<arr.length-1-counter; j++){
+                if (comparator.compare(arr[j], (arr[j+1])) > 0){
                     T temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;

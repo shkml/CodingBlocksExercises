@@ -1,6 +1,6 @@
-package OOPs;
+package OOPs.Stacks;
 
-public class DynamicStack extends StackUsingArrays{
+public class DynamicStack extends StackUsingArrays {
 
     public DynamicStack() throws Exception{
         this(DAFAULTCAPACITY);
