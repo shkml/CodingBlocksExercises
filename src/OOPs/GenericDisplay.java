@@ -9,7 +9,22 @@ public class GenericDisplay {
         display(str);
 
         Character[] c = {'a', 'e', 'i', 'o', 'u'};
+        System.out.println(c.getClass());
         display(c);
+
+        // Array of Cars of length 5
+        Car[] cars = new Car[5];
+        cars[0] = new Car(1000, 100, "red");
+        cars[1] = new Car(2100, 1600, "black");
+        cars[2] = new Car(1800, 1400, "yellow");
+        cars[3] = new Car(1200, 1200, "green");
+        cars[4] = new Car(900, 90, "white");
+
+        bubbleSrt(cars);
+        // address will display
+        display(cars);
+//        System.out.println(cars.getClass());
+        System.out.println();
     }
 
 /*
@@ -25,5 +40,17 @@ public class GenericDisplay {
         for (T val: s)
             System.out.print(val+ " ");
         System.out.println();
+    }
+
+    public static <T extends Comparable<T>> void bubbleSrt(T[] arr){
+        for(int counter = 0; counter <arr.length-1; counter++){
+            for (int j=0; j<arr.length-1-counter; j++){
+                if (arr[j].compareTo(arr[j+1]) > 0){
+                    T temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
     }
 }
