@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 public class boardPath {
     public static void main(String[] args) {
-
         System.out.println(getBoardPath(0, 10));
-
     }
 
     public static ArrayList<String> getBoardPath(int curr, int end){
