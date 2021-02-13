@@ -32,5 +32,7 @@ public class SieveofEratosthenes {
             if (arr[idx])
                 System.out.print(idx+" ");
         }
+
+        input.close();
     }
 }
