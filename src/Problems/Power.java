@@ -11,6 +11,8 @@ public class Power {
         System.out.print("Enter value of n: ");
         int n = input.nextInt();
         System.out.println(power(x,n));
+
+        input.close();
     }
 
     public static int power(int x, int n){
