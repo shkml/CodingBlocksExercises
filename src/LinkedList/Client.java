@@ -59,6 +59,12 @@ public class Client {
 
         System.out.println("\nMid element: "+l.midPoint());
 
+
+//        for (int i = l.getSize()-1; i>= 0; i--)
+        System.out.println(l.kthNodeFromEnd(1));
+        System.out.println(l.kthNodeFromEnd(2));
+        System.out.println(l.kthNodeFromEnd(3));
+        System.out.println(l.kthNodeFromEnd(4));
     }
 
 }

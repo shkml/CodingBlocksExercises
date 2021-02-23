@@ -3,7 +3,7 @@ package Recursion;
 public class mergeSort {
     public static void main(String[] args) {
 
-        int[] arr = {10,60,30,40,20,35,100,23,70};
+        int[] arr = {10,60,30,40,20,35,100,25,70};
 
         int[] res = mergeSortCode(arr, 0, arr.length-1);
 
