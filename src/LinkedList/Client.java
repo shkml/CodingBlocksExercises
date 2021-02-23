@@ -37,5 +37,28 @@ public class Client {
         l.removeLast();
         l.traverse();
 
+        System.out.println("\nSize: "+ l.getSize());
+
+        System.out.print("\nRemove at: ");
+        l.removeAt(2);
+        l.traverse();
+
+        System.out.print("\nReverse data: ");
+        l.reverseData();
+        l.traverse();
+
+        System.out.print("\nReverse Pointers: ");
+        l.reversePointers();
+        l.traverse();
+
+        System.out.println("\nAdding elements");
+        l.addFirst(5);
+        //l.addNodeAt(2,15);
+        //l.addNodeAt(4, 25);
+        l.traverse();
+
+        System.out.println("\nMid element: "+l.midPoint());
+
     }
+
 }
