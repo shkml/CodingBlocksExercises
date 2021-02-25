@@ -1,12 +1,12 @@
 package OOPs.Stacks;
 
-public class DynamicStack extends StackUsingArrays {
+public class DynamicQueue extends QueueUsingArrays{
 
-    public DynamicStack() throws Exception{
-        this(DAFAULTCAPACITY);
+    public DynamicQueue() throws Exception{
+        this(DAFAULT_CAPACITY);
     }
 
-    public DynamicStack(int capacity) throws Exception{
+    public DynamicQueue(int capacity) throws Exception{
         super(capacity);
     }
 
@@ -17,6 +17,6 @@ public class DynamicStack extends StackUsingArrays {
                 arr[i] = this.data[i];
             this.data = arr;
         }
-        super.push(value);
+        super.enqueue(value);
     }
 }

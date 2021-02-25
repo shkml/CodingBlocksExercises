@@ -1,10 +1,10 @@
-package LinkedList;
+package OOPs.GenericClass;
 
-public class LinkedList {
+public class LinkedListGeneric<T> {
 
     // So that no other class can create an instance of same
     private class Node {
-        int data;
+        T data;
         Node next;
     }
 
@@ -24,7 +24,7 @@ public class LinkedList {
     }
 
     // add an element to the end of the list
-    public void addLast(int val) {
+    public void addLast(T val) {
         Node nn = new Node();
         nn.data = val;
         nn.next = null;
@@ -45,7 +45,7 @@ public class LinkedList {
     }
 
     // O(1)
-    public void addFirst(int val) {
+    public void addFirst(T val) {
         Node nn = new Node();
         nn.data = val;
         nn.next = null;
@@ -63,21 +63,21 @@ public class LinkedList {
     }
 
     // O(1)
-    public int getFirst() throws Exception {
+    public T getFirst() throws Exception {
         if (this.size == 0)
             throw new Exception("Linked List is Empty!");
         return this.head.data;
     }
 
     // O(1)
-    public int getLast() throws Exception {
+    public T getLast() throws Exception {
         if (this.size == 0)
             throw new Exception("Linked List is Empty!");
         return this.tail.data;
     }
 
     // O(n)
-    public int getAt(int index) throws Exception {
+    public T getAt(int index) throws Exception {
         if (this.size == 0)
             throw new Exception("Linked List is Empty!");
         if (index < 0 || index > this.size)
@@ -109,7 +109,7 @@ public class LinkedList {
     }
 
     // O(n)
-    public void addNodeAt(int index, int val) throws Exception {
+    public void addNodeAt(int index, T val) throws Exception {
         if (this.size == 0 && index > 0)
             throw new Exception("Linked List is Empty!");
 
@@ -211,7 +211,7 @@ public class LinkedList {
     }
 
     // Reverse Data
-    public void reverseData() throws Exception {
+    /*public void reverseData() throws Exception {
         int left = 0;
         int right = this.size - 1;
 
@@ -228,7 +228,7 @@ public class LinkedList {
         }
 
         return;
-    }
+    }*/
 
     // Reverse Pointers
     public void reversePointers() {
@@ -247,38 +247,5 @@ public class LinkedList {
         this.head = this.tail;
         this.tail = t;
         this.tail.next = null;
-    }
-
-    // mid point of Linked list - cannot use size variable
-    public int midPoint() throws Exception {
-        /*Node midNode = getNodeAt(this.size/2);
-        return midNode.data ;*/
-
-        Node single = this.head;
-        Node doub = this.head;
-
-        while(doub.next!=null && doub.next.next!=null){
-            single = single.next;
-            doub = doub.next.next;
-        }
-        return single.data;
-    }
-
-    public int kthNodeFromEnd(int lastIndex){
-        Node slow = this.head;
-        Node fast = this.head;
-        int n = lastIndex;
-
-        while(n!=0){
-            fast = fast.next;
-            n-=1;
-        }
-
-        while(fast!=null){
-            fast = fast.next;
-            slow = slow.next;
-        }
-
-        return slow.data;
     }
 }
