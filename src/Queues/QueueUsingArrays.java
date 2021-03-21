@@ -1,4 +1,4 @@
-package OOPs.Stacks;
+package Queues;
 
 public class QueueUsingArrays {
 

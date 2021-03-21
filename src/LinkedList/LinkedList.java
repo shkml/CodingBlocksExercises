@@ -281,4 +281,25 @@ public class LinkedList {
 
         return slow.data;
     }
+
+    public void merge_sorted_list(LinkedList other) throws Exception {
+
+        // write your code here
+        LinkedList ll = new LinkedList();
+        Node o = other.head;
+        Node p = this.head;
+        while(o!=null && p!=null){
+            if (o.data > p.data){
+                ll.addLast(p.data);
+                p = p.next;
+            }
+            else {
+                ll.addLast(o.data);
+                o = o.next;
+            }
+        }
+        this.head = ll.head;
+        traverse();
+        return;
+    }
 }
