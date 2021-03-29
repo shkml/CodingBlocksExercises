@@ -38,8 +38,8 @@ public class allIndicesProblem {
         ArrayList<Integer> result = new ArrayList<>();
         result = indicesProblem(arr, result, M, 0);
 
-        for (int i=0; i<result.size(); i++)
-            System.out.print(result.get(i)+" ");
+        for (int val: result)
+            System.out.print(val+" ");
         input.close();
     }
 
