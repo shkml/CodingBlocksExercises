@@ -3,7 +3,6 @@ package Queues;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.Queue;
 
 public class FirstNonRepeatingCharacterInAStream {
 
@@ -22,7 +21,7 @@ public class FirstNonRepeatingCharacterInAStream {
     * */
     public static char bruteForceApproach(String str){
         // HashMap
-        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> hm = new HashMap<>();
         StringBuilder sb = new StringBuilder();
         char nonRepeatingCharacter = '0';
         for(int i = 0; i< str.length(); i++) {
@@ -54,8 +53,8 @@ public class FirstNonRepeatingCharacterInAStream {
     * and iterating over the queue, the first element found to be having the occurrence as 1,
     * else, removing the same from the queue.   */
     public static char firstNonRepeatingUsingQueue(String str){
-        Deque<Character> queue = new ArrayDeque<Character>();
-        HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+        Deque<Character> queue = new ArrayDeque<>();
+        HashMap<Character, Integer> hm = new HashMap<>();
         char nonRepeatingElement = '0';
         for (int i = 0; i < str.length(); i++){
             char c = str.charAt(i);
