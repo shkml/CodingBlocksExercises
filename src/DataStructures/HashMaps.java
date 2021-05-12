@@ -1,5 +1,6 @@
 package DataStructures;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HashMaps {
@@ -45,6 +46,7 @@ public class HashMaps {
         System.out.println(hashmap.values());
 
         // Iterating over values
+        System.out.println("HashMap values:");
         for (int value : hashmap.values()) {
             System.out.println(value);
         }
@@ -55,5 +57,17 @@ public class HashMaps {
 
         // Find length of number of keys i.e., 3
         System.out.println(hashmap.size());
+
+        for (String key : hashmap.keySet()) {
+            if (key.equals("Apple")) {
+                hashmap.put(key, hashmap.get(key) + 45);
+            }
+        }
+
+        System.out.println(hashmap.get("Apple"));
+
+        boolean contains = hashmap.containsKey("Mango");
+        System.out.println("hashmap.containsKey(Mango): " + contains);
+
     }
 }

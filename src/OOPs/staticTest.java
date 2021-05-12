@@ -1,7 +1,7 @@
 package OOPs;
 
 public class staticTest {
-    static public int wheels = 10;
+    public static int wheels = 10;
 
     public static void main(String[] args) {
         staticTest s = new staticTest();
