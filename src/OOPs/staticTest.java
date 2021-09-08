@@ -10,7 +10,7 @@ public class staticTest {
 
         s2.wheels = 21;
 
-        System.out.println(s.wheels);
+        System.out.println(staticTest.wheels);
         System.out.println(s1.wheels);
         System.out.println(s2.wheels);
     }
