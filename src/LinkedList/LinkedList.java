@@ -8,7 +8,7 @@ public class LinkedList {
         Node next;
     }
 
-    /*Node n = new Node();*/
+    /* Node n = new Node(); */
     private Node head;
     private Node tail;
     private int size;
@@ -92,7 +92,8 @@ public class LinkedList {
         return temp.data;
     }
 
-    // private so that client class do not have the authority to manipulate the node.
+    // private so that client class do not have the authority to manipulate the
+    // node.
     private Node getNodeAt(int index) throws Exception {
         if (this.size == 0)
             throw new Exception("Linked List is Empty!");
@@ -231,50 +232,57 @@ public class LinkedList {
     }
 
     // Reverse Pointers
-    public void reversePointers() {
+    public Node reversePointers() {
 
-        Node prev = this.head;
-        Node current = prev.next;
-        Node ahead;
+        /*
+         * Node prev = this.head; Node current = prev.next; Node ahead;
+         * 
+         * while (current != null) { ahead = current.next; current.next = prev; prev =
+         * current; current = ahead; } Node t = this.head; this.head = this.tail;
+         * this.tail = t; this.tail.next = null;
+         */
+
+        Node prev = null;
+        Node current = this.head;
+        Node next = null;
 
         while (current != null) {
-            ahead = current.next;
+            next = current.next;
             current.next = prev;
             prev = current;
-            current = ahead;
+            current = next;
         }
-        Node t = this.head;
-        this.head = this.tail;
-        this.tail = t;
-        this.tail.next = null;
+
+        return prev;
     }
 
     // mid point of Linked list - cannot use size variable
     public int midPoint() throws Exception {
-        /*Node midNode = getNodeAt(this.size/2);
-        return midNode.data ;*/
+        /*
+         * Node midNode = getNodeAt(this.size/2); return midNode.data ;
+         */
 
         Node single = this.head;
         Node doub = this.head;
 
-        while(doub.next!=null && doub.next.next!=null){
+        while (doub.next != null && doub.next.next != null) {
             single = single.next;
             doub = doub.next.next;
         }
         return single.data;
     }
 
-    public int kthNodeFromEnd(int lastIndex){
+    public int kthNodeFromEnd(int lastIndex) {
         Node slow = this.head;
         Node fast = this.head;
         int n = lastIndex;
 
-        while(n!=0){
+        while (n != 0) {
             fast = fast.next;
-            n-=1;
+            n -= 1;
         }
 
-        while(fast!=null){
+        while (fast != null) {
             fast = fast.next;
             slow = slow.next;
         }
@@ -288,12 +296,11 @@ public class LinkedList {
         LinkedList ll = new LinkedList();
         Node o = other.head;
         Node p = this.head;
-        while(o!=null && p!=null){
-            if (o.data > p.data){
+        while (o != null && p != null) {
+            if (o.data > p.data) {
                 ll.addLast(p.data);
                 p = p.next;
-            }
-            else {
+            } else {
                 ll.addLast(o.data);
                 o = o.next;
             }
