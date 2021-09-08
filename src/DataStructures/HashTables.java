@@ -1,5 +1,7 @@
 package DataStructures;
+
 import java.util.*;
+
 public class HashTables {
 
     public static void main(String[] args) {
@@ -9,6 +11,8 @@ public class HashTables {
 
         Object ht2 = ht.clone();
         System.out.println(ht2.toString());
+
+        System.out.println(ht);
 
     }
 }
